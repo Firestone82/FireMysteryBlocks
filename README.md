@@ -6,20 +6,20 @@ Minecraft plugin that adds highly configurable mystery blocks — shared objecti
 
 ## About
 
-FireMysteryBlocks lets server administrators define special blocks that function as competitive mining objectives. Players mine them to earn rewards based on contribution level, while blocks track miners, record history, and regenerate over time. Each block is independently configured via its own YAML file, making it easy to run community events, timed races, and anti-cheat-protected grinding zones simultaneously.
+FireMysteryBlocks lets server administrators define special blocks as competitive mining objectives. Players mine them to earn rewards based on contribution level, while the plugin tracks miners, caches payouts for offline players, and regenerates blocks over time. Each block has its own YAML config file, so you can run community events, timed races, and grind zones simultaneously with completely independent settings.
 
 ## Features
 
 - Per-block YAML configuration with independent tuning
-- Tiered multi-stage rewards triggered on mine, destroy, reset, and regeneration events
+- Tiered multi-stage rewards triggered on mine, destroy, reset, and regeneration
 - Leaderboard tracking with configurable reward levels
-- Offline reward caching for players who are not online at payout time
+- Offline reward caching for players not online at payout time
 - Progressive block regeneration after inactivity
 - Hologram integration: CMI, HolographicDisplays, DecentHolograms, FancyHolograms
-- Customizable inventory GUIs accessible via command or block interaction
+- Customizable inventory GUIs via command or block interaction
 - PlaceholderAPI support for scoreboards and chat
-- Anti-cheat measures: speed detection and AFK prevention
-- History tracking with timestamps
+- Anti-cheat: speed detection and AFK prevention
+- Full destruction history with timestamps
 
 ## Requirements
 
@@ -30,10 +30,12 @@ FireMysteryBlocks lets server administrators define special blocks that function
 
 ## Setup
 
-1. Download the latest release JAR and place it in your server's `plugins/` folder.
-2. Restart the server to generate the default configuration.
-3. Edit `plugins/FireMysteryBlocks/config.yml` and the per-block files in `plugins/FireMysteryBlocks/blocks/`.
-4. Use `/fmb reload` to apply changes without restarting.
+1. Download the latest release JAR from the [Releases](https://github.com/Firestone82/FireMysteryBlocks/releases) page.
+2. Place the JAR into your server's `plugins/` directory.
+3. Start (or restart) the server — the plugin generates `plugins/FireMysteryBlocks/config.yml` and the `blocks/` folder on first run.
+4. Edit `plugins/FireMysteryBlocks/config.yml` to configure the database, hologram provider, and global settings.
+5. Create individual block definition files under `plugins/FireMysteryBlocks/blocks/`.
+6. Run `/fmb reload` to apply changes without a server restart.
 
 ## License
 
